@@ -1,7 +1,7 @@
 from pytodoist import todoist
 from os.path import dirname, join
 
-user1 = todoist.login('felarof.nayak@gmail.com', 'fel@rof666')
+user1 = todoist.login('todoistloginemail@domain.com', 'password')
 
 import numpy as np
 #  np.random.seed(1)
