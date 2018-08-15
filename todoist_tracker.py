@@ -5,10 +5,9 @@
 import numpy as np
 np.random.seed(1)
 
-from bokeh.layouts import row, column, gridplot
-from bokeh.models import AjaxDataSource, Slider, Select
-from bokeh.plotting import curdoc, figure
-from bokeh.driving import count
+from bokeh.layouts import gridplot
+from bokeh.models import AjaxDataSource
+from bokeh.plotting import figure
 from bokeh.embed import components
 from flask import Flask, request, render_template, abort, Response, jsonify
 
@@ -20,7 +19,9 @@ def index():
     kwargs = {'plot_script': plot_script, 'plot_div': plot_div}
     kwargs['title'] = 'Todoist'
     if request.method == 'GET':
-        return render_template('index.html', **kwargs) 
+        return render_template('index.html', **kwargs)
+    abort(404)
+    abort(Respone('Error'))
 
 def _create_data():
    karma = np.random.uniform(0.05, 0.95, size=1)
