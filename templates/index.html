@@ -1,0 +1,31 @@
+<!-- http://jinja.pocoo.org/docs/2.10/templates/#escaping -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+              <title>{{ title }}</title>
+
+              <link
+                 href="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css"
+                    rel="stylesheet" type="text/css">
+              <link
+                 href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.css"
+                     rel="stylesheet" type="text/css">
+              <link
+                 href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.css"
+                     rel="stylesheet" type="text/css">
+
+              <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+              <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.13.0.min.js"></script>
+              <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.13.0.min.js"></script>
+
+</head>
+
+<body>
+        <h1>Hello!</h1>
+              {{ plot_div|safe }}
+              {{ plot_script|safe }}
+</body>
+
+</html>
