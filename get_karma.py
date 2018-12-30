@@ -1,6 +1,6 @@
 from pytodoist import todoist
 
-user1 = todoist.login('felarof.nayak@gmail.com', 'fel@rof666')
+user1 = todoist.login('todoistloginemail@domain.com', 'password')
 
 import datetime as dt
 today = dt.datetime.today().strftime('%d-%b-%Y')
